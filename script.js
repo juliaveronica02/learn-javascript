@@ -115,7 +115,7 @@ console.log(namaSiswaImpactByte)
 namaSiswaImpactByte.pop();
 console.log(namaSiswaImpactByte);
 
-// //contoh for in 1
+// //contoh for in 1.
 // for(let siswa in namaSiswaImpactByte){
 //     console.log(namaSiswaImpactByte);
 // }
@@ -203,7 +203,7 @@ const newSiswa = {
 namaSiswaDenganAsal2.push(newSiswa)
 console.log(namaSiswaDenganAsal2);
 
-//contoh array find
+//contoh array find hanya menemukan 1 dan tidak akan lanjut loop.
 const ditemukan = namaSiswaDenganAsal2.find((item, index, array) => {
     if(item.asal == "Batam")
         return true;
@@ -211,10 +211,72 @@ const ditemukan = namaSiswaDenganAsal2.find((item, index, array) => {
 });
 console.log(ditemukan);
 
-//contoh array filter 
+//contoh array filter cari semua dan hanya yang batam karena sama saat dikondisi.
 const ditemukan2 = namaSiswaDenganAsal2.filter((item, index, array) => {
     if(item.asal == "Batam")
         return true;
         return false;
 });
 console.log(ditemukan2);
+
+//foreach.
+namaSiswaGlints.forEach(function(value, index, array){
+    console.log(value, index, array);
+})
+
+//property value shorthand cara lama.
+const name = "Julia";
+const lastName = "Veronica";
+const person = {
+    name : name,
+    lastName: lastName
+}
+console.log(person.name);
+console.log(person.lastName);
+
+//property value shorthand 2 cara baru.
+const name1 = "Julia";
+const lastName1 = "Veronica";
+const kelasnya = "bisnis";
+const person2 = {
+    name,
+    lastName,
+    kelas: kelasnya
+}
+console.log(person2.name);
+console.log(person2.lastName);
+
+//object assign
+const name3 = "Julia";
+const lastName3 = "Veronica";
+const person3 = {
+    name : name,
+    lastName: lastName
+}
+const bodyMeasure = {
+    height: '170 cm',
+    weight: '50 kg',
+    kelas: 'pekerja'
+}
+const personWithMeasure = Object.assign({}, person3, bodyMeasure);
+console.log(person3);
+console.log(personWithMeasure);
+
+//object assign 2
+const name4 = "Julia";
+const lastName4 = "Veronica";
+const person4 = {
+    name : name,
+    lastName: lastName
+}
+const databaru = {
+    tanggalLahir: '2 juni'
+}
+const bodyMeasure2 = {
+    height: '170 cm',
+    weight: '50 kg',
+    kelas: 'pekerja'
+}
+const personWithMeasure1 = Object.assign(person4, bodyMeasure2, databaru);
+console.log(person4);
+console.log(personWithMeasure1);
