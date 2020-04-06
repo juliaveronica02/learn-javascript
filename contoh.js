@@ -41,17 +41,17 @@ console.log(myContacts);
 //     console.log(myContacts[index].name)
 // }
 
-//forEach 1
+//forEach 1.
 // let contact = myContacts.forEach((data) => {
 //     console.log(data);
 // });
 
-//forEach 2 tampilkan nama 2
+//forEach 2 tampilkan nama 2.
 let contact = myContacts.forEach((data) => {
     console.log(data.name);
 });
 
-//add contact 2
+//add contact 2.
 const newData = {
     id: 4,
     name: 'test',
@@ -60,13 +60,13 @@ const newData = {
 myContacts.push(newData)
 console.log(myContacts)
 
-//filter 2
+//filter 2.
 let filterCont = myContacts.filter(function(listContact) {
     return listContact.name == 'Betty Brave'
 })
 console.log(filterCont);
 
-//delete 2
+//delete 2.
 let newData2 = {
     id: 5,
     name: 'test123',
@@ -77,15 +77,20 @@ console.log(myContacts)
 myContacts.pop()
 console.log(myContacts)
 
-function test(name, nomor, email) {
+//input manual id, nama, nomor dan email.
+function test(npm, name, nomor, email) {
     let test1 = {
-        id: '',
+        id: npm,
         nama : name,
         phone : nomor,
         email: email
     }
     console.log(test1);
+    myContacts.push(test1);
+    console.log(myContacts);
+    // document.getElementById("demo").innerHTML = myContacts;
 }
-let hasil = myContacts.push(test());
-console.log(hasil);
-console.log(myContacts);
+// function myFunction() {
+//         $(event.currentTarget).parent().remove();
+//         //alert('mau hapus');
+// }
