@@ -1,3 +1,6 @@
+### javascript global object
+
+```javascript
 const myContacts = [{
     id: 1,
     name: 'Alpha Avalon',
@@ -89,3 +92,6 @@ function test(name, nomor, email) {
 let hasil = myContacts.push(test());
 console.log(hasil);
 console.log(myContacts);
+```
+## create contact console with method add+ show contact, filter contact and delete.
+<hr>
